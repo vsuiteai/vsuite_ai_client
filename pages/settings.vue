@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import General from "~/components/client/settings/general.vue";
+
 const route = useRoute("/settings");
 
 definePageMeta({
@@ -10,11 +12,11 @@ definePageMeta({
 route.meta.breadcrumb_bottom = "Settings";
 
 const settings_tabs = {
-  general_setting: { label: "OVERVIEW", component: "Overview" },
-  billing_setting: {
-    label: "vSuite STRATEGIES",
-    component: "Ai_strategies",
-  },
+  general_setting: { label: "General", component: General },
+  // billing_setting: {
+  //   label: "Billing",
+  //   component: "Ai_strategies",
+  // },
 } as const; // makes keys literal types
 
 type ClientTabKey = keyof typeof settings_tabs;
@@ -58,6 +60,8 @@ const get_current_tab = computed(() => {
     </div>
     <div
       class="flex flex-col items-start py-[24px] px-[32px] border-[1px] border-[#E5E7EB]"
-    ></div>
+    >
+      <component :is="get_current_tab"></component>
+    </div>
   </div>
 </template>

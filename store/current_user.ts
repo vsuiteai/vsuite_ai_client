@@ -11,8 +11,13 @@ export const useCurrentUserStore = defineStore("currentUserStore", () => {
     current_user.value = data;
   };
 
+  const clearCurrentUser = () => {
+    current_user.value = null;
+  };
+
   return {
     getCurrentUser,
     setCurrentUser,
+    clearCurrentUser,
   };
 });

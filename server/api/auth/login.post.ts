@@ -27,12 +27,12 @@ export default defineEventHandler(async (event) => {
       statusCode: 401,
       statusMessage: "Client Password not set",
     });
-  console.log(client_password);
-  console.log(fetched_client_password);
+
   const isMatch = await bcrypt.compare(
     client_password,
     fetched_client_password
   );
+
   if (!isMatch) {
     throw createError({
       statusCode: 401,

@@ -45,7 +45,7 @@ export default defineEventHandler(async (event) => {
       throw new Error("Required detail(s) missing");
     }
 
-    console.log(client_industry);
+    // console.log(client_industry);
 
     // let client_primary_work_email_is_a_duplicate = await get_client_by_email(
     //   client_contact_work_email

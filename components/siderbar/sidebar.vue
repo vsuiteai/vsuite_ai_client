@@ -2,10 +2,14 @@
 import { parent_routes } from "~/config/parent_routes";
 const { clear } = useUserSession();
 
+import { useCurrentUserStore } from "../../store/current_user";
+
 const webapp_parent_routes = parent_routes.web_app;
 
 const logout = async () => {
   await clear();
+  useCurrentUserStore().clearCurrentUser();
+
   useRouter().push(parent_routes.web_app.sign_in);
 };
 </script>

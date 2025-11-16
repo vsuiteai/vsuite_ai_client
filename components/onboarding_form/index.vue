@@ -197,7 +197,7 @@ onMounted(() => {});
       <div
         class="flex flex-col lg:flex-row items-center justify-between w-full"
       >
-        <span class="text-[24px] font-[600] captalize">CEO Onboarding </span>
+        <span class="text-[24px] font-[600] captalize">CEO Form </span>
         <span class="text-[18px] font-[600] uppercase text-gray-600">{{
           client_details?.client_company_name
         }}</span>

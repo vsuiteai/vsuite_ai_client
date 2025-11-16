@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { parent_routes } from "~/config/parent_routes";
+
 defineProps<{
   questionaire_entry: QuestionaireEntry;
+  current_client: ClientDetail | null;
 }>();
 
 const format_answer = (answer: string | string[] | null) => {
@@ -12,10 +15,16 @@ const format_answer = (answer: string | string[] | null) => {
 };
 </script>
 <template>
-  <div class="w-full flex items-start justify-between h-[70px]">
-    <span class="font-[500] text-[16px]/[21px] font-[#000000]">
-      CEO Onboarding
-    </span>
+  <div class="w-full flex items-start h-[70px] gap-2">
+    <span class="font-[500] text-[16px]/[21px] font-[#000000]"> CEO Form </span>
+
+    <NuxtLink
+      :to="`${parent_routes.web_app.forms.client_onboarding.path}?uid=${current_client?.client_uid}`"
+      class="hover:opacity-[70%]"
+      target="_blank"
+    >
+      <IconsLink />
+    </NuxtLink>
   </div>
 
   <div class="w-full relative max-h-[600px] overflow-y-auto">

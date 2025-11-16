@@ -35,12 +35,12 @@ const form_types = reactive<{
 }>({
   client_onboarding_form: {
     component: Ceo_onboarding,
-    label: "CEO Onboarding",
+    label: "CEO Form",
     questionaire_entry: null,
   },
   advisior_onboarding_form: {
     component: Advisor_onboarding,
-    label: "Advisors Onboarding",
+    label: "Company Form",
     questionaire_entry: null,
   },
 });
@@ -119,6 +119,7 @@ watchEffect(async () => {
         <component
           :is="get_current_tab"
           :questionaire_entry="form_types[current_tab].questionaire_entry"
+          :current_client="current_client"
         ></component>
       </template>
     </div>
