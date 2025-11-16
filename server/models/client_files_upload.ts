@@ -45,7 +45,6 @@ export const ClientFilesUploadModel = (sequelize: Sequelize) => {
         allowNull: false,
         unique: true,
       },
-
       file_owner: {
         type: DataTypes.INTEGER,
         allowNull: false,

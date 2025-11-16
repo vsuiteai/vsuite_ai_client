@@ -1,3 +1,5 @@
+import type { File } from "formidable";
+
 export const useClientController = () => {
   const get_client = async (uid: string) => {
     if (!process.client) return;
@@ -208,6 +210,62 @@ export const useClientController = () => {
     }
   };
 
+  const update_client_data = async (
+    {
+      company_name,
+      contact_name,
+      client_contact_work_email,
+      phone,
+      contact_role,
+      client_industry,
+    }: {
+      company_name: string;
+      contact_name: string;
+      client_contact_work_email: string;
+      phone: string;
+      contact_role: string;
+      client_industry: string;
+    },
+    pre_saved_image: file_to_be_uploaded,
+    client_uid: string
+  ) => {
+    if (!process.client) return;
+
+    try {
+      const axios = (await import("axios")).default;
+
+      const formData = new FormData();
+
+      // append text fields
+      formData.append("company_name", company_name);
+      formData.append("contact_name", contact_name);
+      formData.append("client_contact_work_email", client_contact_work_email);
+      formData.append("phone", phone);
+      formData.append("contact_role", contact_role);
+      formData.append("client_industry", client_industry);
+
+      // append image if selected
+      if (pre_saved_image) {
+        formData.append("client_logo", pre_saved_image);
+      }
+
+      const response = await axios.post(
+        `/api/clients/${client_uid}/update`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+    } catch (err: any) {
+      const errorMessage =
+        err?.response?.data?.message || "Something went wrong during upload.";
+
+      throw new Error(errorMessage); // or return { error: errorMessage }
+    }
+  };
+
   return {
     get_clients,
     get_client_submissions,
@@ -215,5 +273,6 @@ export const useClientController = () => {
     get_client,
     verify_client,
     get_clients_files_analytics,
+    update_client_data,
   };
 };

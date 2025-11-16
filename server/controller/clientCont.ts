@@ -172,10 +172,8 @@ const email_client_by_uuid = async (
 };
 
 const get_client_analytics = async () => {
-  // 1. Total Clients
   const total_clients = await Clients.count();
 
-  // 2. Total Clients grouped by industries
   const clients_by_industry = await Clients.findAll({
     attributes: ["client_industry", [fn("COUNT", col("client_id")), "total"]],
     group: ["client_industry"],
@@ -209,6 +207,30 @@ const create_client = async (client_details: ClientDetail) => {
   // console.log(res.dataValues);
 
   return res.dataValues as ClientDetail;
+};
+
+const update_client_by_uuid = async (
+  uid: string,
+  updated_client_details: ClientDetail
+) => {
+  if (!uid) throw new Error("Client UID is required");
+
+  const client = await Clients.findOne({ where: { client_uid: uid } });
+
+  if (!client) throw new Error("Client not found");
+
+  // Update the client record
+  await client.update({
+    client_company_name: updated_client_details.client_company_name,
+    client_contact_fullname: updated_client_details.client_contact_fullname,
+    client_contact_work_email: updated_client_details.client_contact_work_email,
+    client_contact_phone: updated_client_details.client_contact_phone,
+    client_contact_role: updated_client_details.client_contact_role,
+    client_industry: updated_client_details.client_industry,
+    client_logo_url: updated_client_details.client_logo_url,
+  });
+
+  return client;
 };
 
 const init_client_verification = async (
@@ -283,6 +305,7 @@ export {
   email_client_by_uuid,
   get_client_analytics,
   create_client,
+  update_client_by_uuid,
   init_client_verification,
   verify_client,
 };

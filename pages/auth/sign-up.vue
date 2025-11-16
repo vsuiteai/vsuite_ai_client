@@ -96,7 +96,7 @@ const register_client = handleSubmit(async (values) => {
 
 onBeforeMount(async () => {
   if (loggedIn.value) {
-    // await navigateTo(parent_routes.web_app.dashboard.path);
+    await navigateTo(parent_routes.web_app.dashboard.path);
   }
 });
 </script>

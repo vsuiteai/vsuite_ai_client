@@ -42,6 +42,21 @@ const get_client_file_by_uuid_and_name = async (
   return client_files;
 };
 
+const get_client_logo_url_by_uuid_and_url = async (
+  client_uid: string,
+  client_logo_url: string
+) => {
+  const client_logo = await Clients.findOne({
+    where: { client_uid: client_uid, client_logo_url: client_logo_url },
+  });
+
+  if (client_logo) {
+    return client_logo;
+  }
+
+  return null;
+};
+
 const create_client_file = async (client_file_details: ClientUploadedFile) => {
   const mapped_type = mapMimeTypeToFileType(client_file_details.file_type);
   const res = await (
@@ -212,6 +227,7 @@ const get_client_files_analytics = async (
 
 export {
   get_client_file_by_uuid_and_name,
+  get_client_logo_url_by_uuid_and_url,
   create_client_file,
   get_client_files_by_uuid_with_pagination,
   get_client_files_by_uuid,

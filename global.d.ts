@@ -48,6 +48,7 @@ declare global {
 
     status?: boolean;
     last_activity?: AnActivityLogEntry;
+    client_logo_url?: string;
   };
 
   type Pagination = {

@@ -65,6 +65,11 @@ export const ClientModel = (sequelize: Sequelize) => {
       client_updated_at: {
         type: DataTypes.DATE,
       },
+      client_logo_url: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+      },
     },
     {
       tableName: "clients",
