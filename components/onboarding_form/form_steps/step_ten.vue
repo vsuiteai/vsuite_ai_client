@@ -150,7 +150,7 @@ onMounted(() => {
   // Sync fields with store
 
   syncStoreValue(
-    step_ten_how_often_do_you_provide_constructive_feedback_to_your_team,
+    step_ten_how_confident_are_you_in_setting_a_clear_direction,
     () =>
       onboardClientFormSectionTenStore
         .step_ten_how_confident_are_you_in_setting_a_clear_direction
@@ -236,6 +236,8 @@ onMounted(() => {
               name="step_ten_how_confident_are_you_in_setting_a_clear_direction"
               class="peer/one block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionTenStore
                   .step_ten_how_confident_are_you_in_setting_a_clear_direction
@@ -278,6 +280,8 @@ onMounted(() => {
               name="step_ten_how_often_do_you_provide_constructive_feedback_to_your_team"
               class="peer/two block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionTenStore
                   .step_ten_how_often_do_you_provide_constructive_feedback_to_your_team
@@ -315,6 +319,8 @@ onMounted(() => {
               name="step_ten_how_effectively_do_you_delegate_tasks"
               class="peer/three block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionTenStore
                   .step_ten_how_effectively_do_you_delegate_tasks
@@ -355,6 +361,8 @@ onMounted(() => {
               name="step_ten_how_frequently_do_you_invest_time_in_developing"
               class="peer/four block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionTenStore
                   .step_ten_how_frequently_do_you_invest_time_in_developing
@@ -392,6 +400,8 @@ onMounted(() => {
               name="step_ten_how_do_you_handle_decision_making"
               class="peer/five block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionTenStore
                   .step_ten_how_do_you_handle_decision_making.question_options"

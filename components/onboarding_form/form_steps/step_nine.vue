@@ -139,7 +139,7 @@ onMounted(() => {
   // Sync fields with store
 
   syncStoreValue(
-    step_nine_how_often_do_you_evaluate_the_impact_of_your_marketing_efforts,
+    step_nine_do_you_currently_have_a_documented_marketing_plan,
     () =>
       onboardClientFormSectionNineStore
         .step_nine_do_you_currently_have_a_documented_marketing_plan
@@ -219,6 +219,8 @@ onMounted(() => {
               name="step_nine_do_you_currently_have_a_documented_marketing_plan"
               class="peer/one block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionNineStore
                   .step_nine_do_you_currently_have_a_documented_marketing_plan
@@ -261,6 +263,8 @@ onMounted(() => {
               name="step_nine_how_often_do_you_evaluate_the_impact_of_your_marketing_efforts"
               class="peer/two block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionNineStore
                   .step_nine_how_often_do_you_evaluate_the_impact_of_your_marketing_efforts
@@ -303,6 +307,8 @@ onMounted(() => {
               name="step_nine_how_confident_are_you_in_understanding_which_marketing_channels_you_need"
               class="peer/three block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionNineStore
                   .step_nine_how_confident_are_you_in_understanding_which_marketing_channels_you_need
@@ -340,6 +346,8 @@ onMounted(() => {
               name="step_nine_how_effectively_do_you_measure_the_ROI"
               class="peer/four block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionNineStore
                   .step_nine_how_effectively_do_you_measure_the_ROI

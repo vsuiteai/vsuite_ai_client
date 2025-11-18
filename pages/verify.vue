@@ -38,6 +38,8 @@ onMounted(async () => {
 
   if (res.client) {
     client.value = res.client;
+
+    await useAuthController().refresh_user_session();
     loading.value = false;
 
     return;

@@ -147,7 +147,7 @@ onMounted(() => {
   // Sync fields with store
 
   syncStoreValue(
-    step_two_how_well_do_you_handle_negative_feedback,
+    step_two_how_often_do_you_recognize_your_emotions,
     () =>
       onboardClientFormSectionTwoStore
         .step_two_how_often_do_you_recognize_your_emotions.question_answer,
@@ -236,6 +236,7 @@ onMounted(() => {
               name="step_two_how_often_do_you_recognize_your_emotions"
               class="peer/how_often_do_you_recognize_your_emotions block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
               <template
                 v-for="option in onboardClientFormSectionTwoStore
                   .step_two_how_often_do_you_recognize_your_emotions
@@ -271,6 +272,8 @@ onMounted(() => {
               name="step_two_how_well_do_you_handle_negative_feedback"
               class="peer/how_well_do_you_handle_negative_feedback block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionTwoStore
                   .step_two_how_well_do_you_handle_negative_feedback
@@ -310,6 +313,8 @@ onMounted(() => {
               name="step_two_how_often_do_you_adjust_your_communication_style_to_better_connect"
               class="peer/how_often_do_you_adjust_your_comm_style block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionTwoStore
                   .step_two_how_often_do_you_adjust_your_communication_style_to_better_connect
@@ -349,6 +354,8 @@ onMounted(() => {
               name="step_two_how_do_you_typically_respond_when_facing_conflict"
               class="peer/respond_when_facing_conflict block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionTwoStore
                   .step_two_how_do_you_typically_respond_when_facing_conflict
@@ -389,6 +396,8 @@ onMounted(() => {
               name="step_two_how_frequently_do_you_feel_comfortable_discussing_difficult_topics"
               class="peer/discussing_difficult_topics block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionTwoStore
                   .step_two_how_frequently_do_you_feel_comfortable_discussing_difficult_topics

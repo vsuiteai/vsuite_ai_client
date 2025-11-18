@@ -207,7 +207,7 @@ onMounted(() => {
   // Sync fields with store
 
   syncStoreValue(
-    step_one_three_how_often_do_you_experiment_in_your_biz,
+    step_one_three_how_well_do_you_leverage_industry_trends,
     () =>
       onboardClientFormSectionOneThreeStore
         .step_one_three_how_well_do_you_leverage_industry_trends
@@ -312,6 +312,8 @@ onMounted(() => {
               name="step_one_three_how_well_do_you_leverage_industry_trends"
               class="peer/one block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionOneThreeStore
                   .step_one_three_how_well_do_you_leverage_industry_trends
@@ -352,6 +354,8 @@ onMounted(() => {
               name="step_one_three_how_often_do_you_experiment_in_your_biz"
               class="peer/two block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionOneThreeStore
                   .step_one_three_how_often_do_you_experiment_in_your_biz
@@ -394,6 +398,8 @@ onMounted(() => {
               name="step_one_three_how_confident_are_you_in_your_understanding_of_your_target_market"
               class="peer/three block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionOneThreeStore
                   .step_one_three_how_confident_are_you_in_your_understanding_of_your_target_market
@@ -436,6 +442,8 @@ onMounted(() => {
               name="step_one_three_how_often_do_you_analyze_your_competitors_strategies"
               class="peer/four block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionOneThreeStore
                   .step_one_three_how_often_do_you_analyze_your_competitors_strategies
@@ -478,6 +486,8 @@ onMounted(() => {
               name="step_one_three_how_effectively_do_you_stay_updated_on_industry_trends"
               class="peer/five block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionOneThreeStore
                   .step_one_three_how_effectively_do_you_stay_updated_on_industry_trends
@@ -520,6 +530,8 @@ onMounted(() => {
               name="step_one_three_how_frequently_do_you_use_customer_feedback"
               class="peer/four block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionOneThreeStore
                   .step_one_three_how_frequently_do_you_use_customer_feedback
@@ -562,6 +574,8 @@ onMounted(() => {
               name="step_one_three_how_well_do_you_identify_new_opportunities"
               class="peer/five block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionOneThreeStore
                   .step_one_three_how_well_do_you_identify_new_opportunities

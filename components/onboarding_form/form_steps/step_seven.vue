@@ -172,7 +172,7 @@ onMounted(() => {
   // Sync fields with store
 
   syncStoreValue(
-    step_seven_how_confident_are_you_in_handling_unexpected_operational_issues,
+    step_seven_how_frequently_do_you_identify_the_root_cause_of_biz_problems,
     () =>
       onboardClientFormSectionSevenStore
         .step_seven_how_frequently_do_you_identify_the_root_cause_of_biz_problems
@@ -262,6 +262,8 @@ onMounted(() => {
               name="step_seven_how_frequently_do_you_identify_the_root_cause_of_biz_problems"
               class="peer/one block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionSevenStore
                   .step_seven_how_frequently_do_you_identify_the_root_cause_of_biz_problems
@@ -304,6 +306,8 @@ onMounted(() => {
               name="step_seven_how_confident_are_you_in_handling_unexpected_operational_issues"
               class="peer/two block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionSevenStore
                   .step_seven_how_confident_are_you_in_handling_unexpected_operational_issues
@@ -346,6 +350,8 @@ onMounted(() => {
               name="step_seven_how_often_do_you_seek_input_when_solving_complex_problems"
               class="peer/three block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionSevenStore
                   .step_seven_how_often_do_you_seek_input_when_solving_complex_problems
@@ -388,6 +394,8 @@ onMounted(() => {
               name="step_seven_how_quickly_do_you_make_decisions_when_faced_with_business_challenges"
               class="peer/four block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionSevenStore
                   .step_seven_how_quickly_do_you_make_decisions_when_faced_with_business_challenges
@@ -430,6 +438,8 @@ onMounted(() => {
               name="step_seven_how_often_do_you_evaluate_the_success_of_your_solutn_after_implementn"
               class="peer/five block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionSevenStore
                   .step_seven_how_often_do_you_evaluate_the_success_of_your_solutn_after_implementn

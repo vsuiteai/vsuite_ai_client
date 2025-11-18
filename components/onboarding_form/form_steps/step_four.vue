@@ -164,7 +164,7 @@ onMounted(() => {
   // Sync fields with store
 
   syncStoreValue(
-    step_four_how_well_do_you_maintain_long_term_relationships_with_clients,
+    step_four_how_often_do_you_build_relatn_with_clients_beyond_transactnal_interactn,
     () =>
       onboardClientFormSectionFourStore
         .step_four_how_often_do_you_build_relatn_with_clients_beyond_transactnal_interactn
@@ -254,6 +254,8 @@ onMounted(() => {
               name="step_four_how_often_do_you_build_relatn_with_clients_beyond_transactnal_interactn"
               class="peer/one block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionFourStore
                   .step_four_how_often_do_you_build_relatn_with_clients_beyond_transactnal_interactn
@@ -296,6 +298,8 @@ onMounted(() => {
               name="step_four_how_well_do_you_maintain_long_term_relationships_with_clients"
               class="peer/two block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionFourStore
                   .step_four_how_well_do_you_maintain_long_term_relationships_with_clients
@@ -338,6 +342,8 @@ onMounted(() => {
               name="step_four_how_often_do_you_engage_with_potential_recruits"
               class="peer/three block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionFourStore
                   .step_four_how_often_do_you_engage_with_potential_recruits
@@ -380,6 +386,8 @@ onMounted(() => {
               name="step_four_how_comfortable_are_you_in_initiating_conversatn"
               class="peer/four block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionFourStore
                   .step_four_how_comfortable_are_you_in_initiating_conversatn
@@ -422,6 +430,8 @@ onMounted(() => {
               name="step_four_how_frequent_do_you_folloup_after_initial_interactn"
               class="peer/five block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionFourStore
                   .step_four_how_frequent_do_you_folloup_after_initial_interactn

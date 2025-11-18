@@ -163,7 +163,7 @@ onMounted(() => {
   // Sync fields with store
 
   syncStoreValue(
-    step_six_rate_your_ability_to_tailor_your_pitch_to_meet_specific_needs,
+    step_six_how_often_do_you_succeed_convincing_clients_to_adopt_your_ideas_or_solutn,
     () =>
       onboardClientFormSectionSixStore
         .step_six_how_often_do_you_succeed_convincing_clients_to_adopt_your_ideas_or_solutn
@@ -250,6 +250,8 @@ onMounted(() => {
               name="step_six_how_often_do_you_succeed_convincing_clients_to_adopt_your_ideas_or_solutn"
               class="peer/one block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionSixStore
                   .step_six_how_often_do_you_succeed_convincing_clients_to_adopt_your_ideas_or_solutn
@@ -292,6 +294,8 @@ onMounted(() => {
               name="step_six_rate_your_ability_to_tailor_your_pitch_to_meet_specific_needs"
               class="peer/two block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionSixStore
                   .step_six_rate_your_ability_to_tailor_your_pitch_to_meet_specific_needs
@@ -329,6 +333,8 @@ onMounted(() => {
               name="step_six_how_frequently_do_you_use_storytelling"
               class="peer/three block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionSixStore
                   .step_six_how_frequently_do_you_use_storytelling
@@ -371,6 +377,8 @@ onMounted(() => {
               name="step_six_how_confident_are_you_when_negotiating_favorable_terms"
               class="peer/four block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionSixStore
                   .step_six_how_confident_are_you_when_negotiating_favorable_terms
@@ -413,6 +421,8 @@ onMounted(() => {
               name="step_six_how_often_do_you_prepare_thoroughly_before_making_an_argument"
               class="peer/five block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionSixStore
                   .step_six_how_often_do_you_prepare_thoroughly_before_making_an_argument

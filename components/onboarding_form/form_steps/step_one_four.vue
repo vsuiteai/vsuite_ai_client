@@ -107,7 +107,7 @@ onMounted(() => {
   // Sync fields with store
 
   syncStoreValue(
-    step_one_four_business_challenge_faced_today,
+    step_one_four_business_reflection,
     () =>
       onboardClientFormSectionOneFourStore.step_one_four_business_reflection
         .question_answer,

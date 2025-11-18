@@ -160,7 +160,7 @@ onMounted(() => {
   // Sync fields with store
 
   syncStoreValue(
-    step_three_rate_your_understanding_of_your_biz_cash_flow_mgmt,
+    step_three_how_often_do_you_review_financial_stmt,
     () =>
       onboardClientFormSectionThreeStore
         .step_three_how_often_do_you_review_financial_stmt.question_answer,
@@ -248,6 +248,8 @@ onMounted(() => {
               name="step_three_how_often_do_you_review_financial_stmt"
               class="peer/one block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionThreeStore
                   .step_three_how_often_do_you_review_financial_stmt
@@ -290,6 +292,8 @@ onMounted(() => {
               name="step_three_rate_your_understanding_of_your_biz_cash_flow_mgmt"
               class="peer/two block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionThreeStore
                   .step_three_rate_your_understanding_of_your_biz_cash_flow_mgmt
@@ -332,6 +336,8 @@ onMounted(() => {
               name="step_three_how_frequently_do_you_set_nd_track_financial_goals_for_your_biz"
               class="peer/three block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionThreeStore
                   .step_three_how_frequently_do_you_set_nd_track_financial_goals_for_your_biz
@@ -374,6 +380,8 @@ onMounted(() => {
               name="step_three_how_confident_are_you_in_creating_nd_managing_budgets"
               class="peer/four block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionThreeStore
                   .step_three_how_confident_are_you_in_creating_nd_managing_budgets
@@ -416,6 +424,8 @@ onMounted(() => {
               name="step_three_how_do_you_assess_the_profitability_before_launch"
               class="peer/five block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionThreeStore
                   .step_three_how_do_you_assess_the_profitability_before_launch

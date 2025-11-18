@@ -145,7 +145,7 @@ onMounted(() => {
   // Sync fields with store
 
   syncStoreValue(
-    step_eight_how_often_do_you_evaluate_the_impact_of_your_sales_efforts,
+    step_eight_do_you_currently_have_a_documented_strategy,
     () =>
       onboardClientFormSectionEightStore
         .step_eight_do_you_currently_have_a_documented_strategy.question_answer,
@@ -223,6 +223,8 @@ onMounted(() => {
               name="step_eight_do_you_currently_have_a_documented_strategy"
               class="peer/one block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionEightStore
                   .step_eight_do_you_currently_have_a_documented_strategy
@@ -265,6 +267,8 @@ onMounted(() => {
               name="step_eight_how_often_do_you_evaluate_the_impact_of_your_sales_efforts"
               class="peer/two block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionEightStore
                   .step_eight_how_often_do_you_evaluate_the_impact_of_your_sales_efforts
@@ -307,6 +311,8 @@ onMounted(() => {
               name="step_eight_how_effectively_do_you_measure_the_ROI_of_your_sales_activities"
               class="peer/three block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionEightStore
                   .step_eight_how_effectively_do_you_measure_the_ROI_of_your_sales_activities
@@ -349,6 +355,8 @@ onMounted(() => {
               name="step_eight_how_frequently_do_you_adjust_your_sales_tactics"
               class="peer/four block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionEightStore
                   .step_eight_how_frequently_do_you_adjust_your_sales_tactics

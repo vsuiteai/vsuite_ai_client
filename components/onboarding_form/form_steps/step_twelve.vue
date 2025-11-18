@@ -119,7 +119,7 @@ onMounted(() => {
   // Sync fields with store
 
   syncStoreValue(
-    step_twelve_how_confident_are_you_in_generating_creative_soln,
+    step_twelve_how_often_do_you_implement_innovative_ideas,
     () =>
       onboardClientFormSectionTwelveStore
         .step_twelve_how_often_do_you_implement_innovative_ideas
@@ -188,6 +188,8 @@ onMounted(() => {
               name="step_twelve_how_often_do_you_implement_innovative_ideas"
               class="peer/one block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionTwelveStore
                   .step_twelve_how_often_do_you_implement_innovative_ideas
@@ -230,6 +232,8 @@ onMounted(() => {
               name="step_twelve_how_confident_are_you_in_generating_creative_soln"
               class="peer/two block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionTwelveStore
                   .step_twelve_how_confident_are_you_in_generating_creative_soln
@@ -272,6 +276,8 @@ onMounted(() => {
               name="step_twelve_how_frequently_do_you_encourage_your_team_to_brainstorm"
               class="peer/three block w-full text-black/[.5] border-0 border-b-[1px] lg:px-[24px] lg:py-[24px] lg:text-[16px] font-[400] lg:bg-transparent lg:border-black/[0.2] appearance-none focus:outline-none focus:ring-0 focus:border-black py-[18px] px-[14px] text-[14px] bg-white border-black"
             >
+              <option value="">Select one</option>
+
               <template
                 v-for="option in onboardClientFormSectionTwelveStore
                   .step_twelve_how_frequently_do_you_encourage_your_team_to_brainstorm
