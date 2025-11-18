@@ -51,8 +51,27 @@ export const useAuthController = () => {
     }
   };
 
+  const refresh_user_session = async () => {
+    if (!process.client) return;
+
+    try {
+      const axios = (await import("axios")).default;
+
+      const response = await axios.get("/api/auth/refresh-session");
+    } catch (error: any) {
+      // Axios wraps error responses differently
+      const message =
+        error?.response?.data?.message || // API-sent error
+        error?.message || // Network error, etc.
+        "An unknown error occurred";
+
+      throw new Error(message);
+    }
+  };
+
   return {
     login_client,
     create_client,
+    refresh_user_session,
   };
 };

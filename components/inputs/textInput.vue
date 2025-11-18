@@ -10,7 +10,7 @@ const props = defineProps({
     type: String,
   },
   error_color_class: {
-    required: true,
+    required: false,
     type: String,
     default: "text-[#EAEAEA]",
   },

@@ -8,6 +8,7 @@ import { useCurrentUserStore } from "../../../store/current_user";
 
 const current_client_store = useCurrentUserStore();
 const clientCont = useClientController();
+const authCont = useAuthController();
 
 const current_client_data = ref(current_client_store.getCurrentUser);
 const current_client_saved_image_url = ref("");
@@ -15,9 +16,18 @@ const pre_saved_image_data = ref("");
 const pre_saved_image = ref<file_to_be_uploaded>(null);
 
 const updating = ref(false);
+const updating_success = ref(false);
 const updating_error = ref("");
 
-const { handleSubmit } = useForm({
+watchEffect(() => {
+  if (updating_success.value) {
+    setTimeout(() => {
+      updating_success.value = false;
+    }, 3000);
+  }
+});
+
+const { handleSubmit, meta } = useForm({
   validationSchema: yup.object({
     company_name: yup
       .string()
@@ -64,13 +74,9 @@ const { handleSubmit } = useForm({
 
 const register_client = handleSubmit(async (values) => {
   try {
-    console.log("here");
-
     if (updating.value) return;
-    console.log("here2");
 
     if (!(current_client_data.value?.client_uid ?? false)) return;
-    console.log("here3");
 
     updating.value = true;
     updating_error.value = "";
@@ -84,13 +90,17 @@ const register_client = handleSubmit(async (values) => {
       client_industry: values.client_industry!,
     };
 
-    console.log(updatedClientDetail);
+    // console.log(updatedClientDetail);
 
-    clientCont.update_client_data(
+    await clientCont.update_client_data(
       updatedClientDetail,
       pre_saved_image.value,
       current_client_data.value?.client_uid!
     );
+
+    await authCont.refresh_user_session();
+
+    updating_success.value = true;
   } catch (error) {
     if (error instanceof Error) {
       updating_error.value = error.message;
@@ -131,12 +141,31 @@ const decodedUrl = computed(() => {
   <div class="w-full flex flex-col gap-[24px]">
     <!-- {{ current_client_data }} -->
     <div class="w-full flex flex-col gap-[4px] bg-[#ffffff]">
-      <div class="w-full flex justify-end items-center">
+      <div class="w-full flex justify-end items-center gap-[4px]">
+        <div class="flex flex-col items-start gap-[4px]">
+          <span
+            v-if="updating_error"
+            class="font-[500] text-[12px]/[16px] text-red-800"
+          >
+            {{ updating_error }}
+          </span>
+
+          <span
+            v-if="updating_success"
+            class="font-[500] text-[12px]/[16px] text-green-800"
+          >
+            Client updated successfully
+          </span>
+        </div>
+
         <div class="flex items-center gap-[8px]">
           <button
             @click="register_client"
+            :disabled="updating || !meta.valid || !meta.dirty"
             class="flex items-center gap-[8px] p-[16px] h-[44px] bg-[#E10600] rounded-[200px]"
           >
+            <IconsRefresh v-if="updating" class="animate-spin" />
+
             <span class="font-[500] text-[15px] text-[#FFFFFF]">
               Save Update
             </span>
@@ -205,12 +234,6 @@ const decodedUrl = computed(() => {
         <h4 class="font-[600] text-[16px] text-[#474D66]">Personal Details</h4>
 
         <div class="w-full flex flex-col gap-[16px]">
-          <div class="flex flex-col items-start gap-[4px]">
-            <span class="font-[500] text-[12px]/[16px] text-red-800">
-              <!-- {{ editing_consultant_error }} -->
-            </span>
-          </div>
-
           <div class="w-full grid gap-4 grid-cols-2 gap-[20px]">
             <div class="flex flex-col gap-[8px]">
               <InputsTextInput
@@ -227,23 +250,6 @@ const decodedUrl = computed(() => {
               />
             </div>
 
-            <div class="flex flex-col gap-[8px]">
-              <InputsEmailInput
-                name="client_contact_work_email"
-                label="Contact Work Email"
-                in_used="settings"
-              />
-            </div>
-
-            <div class="flex flex-col gap-[8px]">
-              <InputsDropdownInput
-                name="contact_role"
-                label="Contact Role"
-                :options="company_roles"
-                in_used="settings"
-              />
-            </div>
-
             <div class="w-full col-span-2 grid grid-cols-2 gap-4">
               <InputsTextInput
                 name="phone"
@@ -255,6 +261,15 @@ const decodedUrl = computed(() => {
                 name="client_industry"
                 label="Client Industry"
                 :options="industries"
+                in_used="settings"
+              />
+            </div>
+
+            <div class="flex flex-col gap-[8px]">
+              <InputsDropdownInput
+                name="contact_role"
+                label="Contact Role"
+                :options="company_roles"
                 in_used="settings"
               />
             </div>

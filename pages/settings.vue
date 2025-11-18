@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import General from "~/components/client/settings/general.vue";
+import Security from "~/components/client/settings/security.vue";
 
 const route = useRoute("/settings");
 
@@ -13,10 +14,10 @@ route.meta.breadcrumb_bottom = "Settings";
 
 const settings_tabs = {
   general_setting: { label: "General", component: General },
-  // billing_setting: {
-  //   label: "Billing",
-  //   component: "Ai_strategies",
-  // },
+  billing_setting: {
+    label: "Security",
+    component: Security,
+  },
 } as const; // makes keys literal types
 
 type ClientTabKey = keyof typeof settings_tabs;

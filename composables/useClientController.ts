@@ -1,4 +1,5 @@
 import type { File } from "formidable";
+import { useCurrentUserStore } from "~/store/current_user";
 
 export const useClientController = () => {
   const get_client = async (uid: string) => {
@@ -258,6 +259,53 @@ export const useClientController = () => {
           },
         }
       );
+
+      const client_data = response.data.client as ClientDetail;
+      const current_user = useCurrentUserStore();
+
+      console.log(client_data);
+
+      const edited_data = {
+        client_company_name: client_data.client_company_name ?? "",
+        client_contact_fullname: client_data.client_contact_fullname ?? "",
+        client_contact_phone: client_data.client_contact_phone ?? "",
+        client_contact_role: client_data.client_contact_role ?? "",
+        client_contact_work_email: client_data.client_contact_work_email ?? "",
+        client_industry: client_data.client_industry ?? "",
+        client_logo_url: client_data.client_logo_url ?? "",
+      };
+
+      current_user.updateCurrentUser(edited_data);
+    } catch (err: any) {
+      const errorMessage =
+        err?.response?.data?.message || "Something went wrong during upload.";
+
+      throw new Error(errorMessage); // or return { error: errorMessage }
+    }
+  };
+
+  const update_client_password = async (
+    {
+      password,
+    }: {
+      password: string;
+    },
+    client_uid: string
+  ) => {
+    if (!process.client) return;
+
+    try {
+      const axios = (await import("axios")).default;
+
+      const formData = new FormData();
+
+      formData.append("password", password);
+
+      await axios.post(`/api/clients/${client_uid}/update_password`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
     } catch (err: any) {
       const errorMessage =
         err?.response?.data?.message || "Something went wrong during upload.";
@@ -274,5 +322,6 @@ export const useClientController = () => {
     verify_client,
     get_clients_files_analytics,
     update_client_data,
+    update_client_password,
   };
 };

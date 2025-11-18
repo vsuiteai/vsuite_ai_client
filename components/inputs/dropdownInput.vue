@@ -17,6 +17,7 @@ const props = defineProps({
   error_color_class: {
     type: String,
     default: "text-[#EAEAEA]",
+    required: false,
   },
   in_used: {
     required: false,

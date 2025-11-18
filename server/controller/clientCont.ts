@@ -230,7 +230,25 @@ const update_client_by_uuid = async (
     client_logo_url: updated_client_details.client_logo_url,
   });
 
-  return client;
+  return client.dataValues as ClientDetail;
+};
+
+const update_client_password_by_uuid = async (
+  uid: string,
+  client_password: string
+) => {
+  if (!uid) throw new Error("Client UID is required");
+
+  const client = await Clients.findOne({ where: { client_uid: uid } });
+
+  if (!client) throw new Error("Client not found");
+
+  // Update the client record
+  await client.update({
+    client_password: client_password,
+  });
+
+  return client.dataValues as ClientDetail;
 };
 
 const init_client_verification = async (
@@ -306,6 +324,7 @@ export {
   get_client_analytics,
   create_client,
   update_client_by_uuid,
+  update_client_password_by_uuid,
   init_client_verification,
   verify_client,
 };

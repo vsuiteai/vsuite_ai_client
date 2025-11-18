@@ -67,7 +67,7 @@ export const ClientModel = (sequelize: Sequelize) => {
       },
       client_logo_url: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         unique: true,
       },
     },

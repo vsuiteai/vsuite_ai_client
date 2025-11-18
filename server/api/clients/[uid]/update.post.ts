@@ -149,8 +149,13 @@ export default defineEventHandler(async (event) => {
   }
 
   // update client
-  update_client_by_uuid(uid, updated_client_details);
+  const updated_client = await update_client_by_uuid(
+    uid,
+    updated_client_details
+  );
+
   return {
     message: "Client updated successfully",
+    client: updated_client,
   };
 });
