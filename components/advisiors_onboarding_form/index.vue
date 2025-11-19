@@ -169,9 +169,12 @@ onMounted(() => {});
                     'opacity-[.5] hover:cursor-not-allowed':
                       !validateCurrentStep,
                   }"
-                  :disabled="!validateCurrentStep"
+                  :disabled="!validateCurrentStep || submitting"
                   class="px-[50px] py-[16px] rounded-[2px] bg-black flex items-center justify-center gap-[10px] text-white"
                 >
+                  <template v-if="submitting">
+                    <IconsRefresh v-if="submitting" class="animate-spin" />
+                  </template>
                   <span v-if="isLastStep">Submit</span>
                   <span v-else class="text-[18px] font-[500]">Continue</span>
                   <span>
